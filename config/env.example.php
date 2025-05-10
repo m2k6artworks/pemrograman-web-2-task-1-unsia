@@ -12,6 +12,11 @@
 // Set your environment here: 'local' or 'production'
 $environment = 'local';
 
+$db_host = '';
+$db_name = '';
+$db_user = '';
+$db_pass = '';
+
 // Optional: Debug mode (set to false in production)
 $debug = ($environment === 'local') ? true : false;
 
