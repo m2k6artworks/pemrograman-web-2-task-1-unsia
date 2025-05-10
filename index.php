@@ -115,11 +115,20 @@
         </div>
         
         <div class="card shadow">
-            <div class="card-header d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">Daftar Mahasiswa</h5>
-                <button type="button" class="btn btn-success btn-add" data-bs-toggle="modal" data-bs-target="#addModal">
-                    <i class="fas fa-plus"></i> Tambah Mahasiswa
-                </button>
+            <div class="card-header row justify-content-between align-items-center">
+                <div class="col-12 col-md-4 mb-2 mb-md-0">
+                    <h5 class="mb-0">Daftar Mahasiswa</h5>
+                </div>
+                <div class="col-12 col-md-4 mb-2 mb-md-0 text-center">
+                    <button id="refreshBtn" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-sync-alt"></i> Refresh Data
+                    </button>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <button type="button" class="btn btn-success btn-add" data-bs-toggle="modal" data-bs-target="#addModal">
+                        <i class="fas fa-plus"></i> Tambah Mahasiswa
+                    </button>
+                </div>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -728,10 +737,10 @@
             });
             
             // Refresh data button
-            $('.card-header').append(
+            /* $('.card-header').append(
                 '<button id="refreshBtn" class="btn btn-outline-primary btn-sm ms-2">' +
                 '<i class="fas fa-sync-alt"></i> Refresh Data</button>'
-            );
+            ); */
             
             $('#refreshBtn').on('click', function() {
                 table.ajax.reload();

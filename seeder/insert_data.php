@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config/config.php';
 
 // Check if data already exists to avoid duplicate inserts
 $stmt = $conn->query("SELECT COUNT(*) FROM mahasiswa");
